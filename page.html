@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>VELMORA</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { width: 1024px; height: 1024px; overflow: hidden; }
+  body { font-family: Georgia, 'Times New Roman', serif; background: #0e3a44; }
+  svg { display: block; width: 1024px; height: 1024px; }
+  .name {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 132px; letter-spacing: 26px; font-weight: bold;
+    fill: #fff6e0; text-anchor: middle;
+  }
+  .rule { stroke: #ffb35c; stroke-width: 4; }
+</style>
+</head>
+<body>
+<svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Travel poster for Velmora, a lagoon city where the sea turns to glass at dusk">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#123f4d"/>
+      <stop offset="0.42" stop-color="#2e6f74"/>
+      <stop offset="0.62" stop-color="#e8865a"/>
+      <stop offset="0.78" stop-color="#f7b267"/>
+      <stop offset="1" stop-color="#ffd9a0"/>
+    </linearGradient>
+    <linearGradient id="sea" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f2a35e"/>
+      <stop offset="0.18" stop-color="#c97a52"/>
+      <stop offset="0.45" stop-color="#2e6f74"/>
+      <stop offset="1" stop-color="#0e3a44"/>
+    </linearGradient>
+    <linearGradient id="glass" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffe9c4"/>
+      <stop offset="0.55" stop-color="#ffd27a"/>
+      <stop offset="1" stop-color="#f08a3c"/>
+    </linearGradient>
+    <linearGradient id="tower" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#cfe8e2"/>
+      <stop offset="0.5" stop-color="#fff6e0"/>
+      <stop offset="1" stop-color="#9fc4bd"/>
+    </linearGradient>
+    <radialGradient id="sun" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#fff3d6"/>
+      <stop offset="0.6" stop-color="#ffcf7d"/>
+      <stop offset="1" stop-color="#ff9e57"/>
+    </radialGradient>
+    <linearGradient id="beam" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ffe9a8" stop-opacity="0.85"/>
+      <stop offset="1" stop-color="#ffe9a8" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- sky -->
+  <rect width="1024" height="640" fill="url(#sky)"/>
+
+  <!-- sun low over the lagoon -->
+  <circle cx="512" cy="560" r="118" fill="url(#sun)"/>
+  <circle cx="512" cy="560" r="150" fill="none" stroke="#ffd9a0" stroke-width="2" opacity="0.55"/>
+  <circle cx="512" cy="560" r="178" fill="none" stroke="#ffd9a0" stroke-width="1.5" opacity="0.3"/>
+
+  <!-- distant glass-sail city silhouette on the horizon -->
+  <g fill="#1d4a55" opacity="0.9">
+    <path d="M0 640 L0 600 L46 600 L46 576 L86 576 L86 606 L128 606 L128 566 L150 566 L150 606 L196 606 L196 588 L236 588 L236 640 Z"/>
+    <path d="M788 640 L788 592 L826 592 L826 570 L866 570 L866 604 L906 604 L906 580 L946 580 L946 612 L1024 612 L1024 640 Z"/>
+  </g>
+  <g fill="#ffcf7d" opacity="0.85">
+    <path d="M128 566 Q 139 546 150 566 Z"/>
+    <path d="M826 570 Q 836 552 846 570 Z"/>
+  </g>
+
+  <!-- sea -->
+  <rect y="640" width="1024" height="384" fill="url(#sea)"/>
+  <!-- sun reflection path on the water -->
+  <g fill="#ffcf7d" opacity="0.8">
+    <rect x="452" y="648" width="120" height="10" rx="5"/>
+    <rect x="432" y="668" width="160" height="9" rx="4"/>
+    <rect x="462" y="688" width="100" height="8" rx="4"/>
+    <rect x="442" y="708" width="140" height="8" rx="4"/>
+    <rect x="472" y="728" width="80" height="7" rx="3"/>
+    <rect x="452" y="748" width="120" height="7" rx="3"/>
+    <rect x="482" y="768" width="60" height="6" rx="3"/>
+  </g>
+  <!-- glassy ripple bands -->
+  <g stroke="#bfe3da" stroke-width="3" opacity="0.5" fill="none">
+    <path d="M60 800 Q 200 792 340 800 T 620 800 T 980 800"/>
+    <path d="M120 860 Q 260 852 400 860 T 700 860 T 960 860"/>
+    <path d="M40 920 Q 220 912 420 920 T 760 920 T 1000 920"/>
+  </g>
+  <g stroke="#fff6e0" stroke-width="2" opacity="0.35" fill="none">
+    <path d="M700 830 Q 800 824 900 830 T 1010 830"/>
+    <path d="M30 890 Q 120 884 210 890 T 330 890"/>
+  </g>
+
+  <!-- islet -->
+  <path d="M352 640 Q 512 610 672 640 L 686 656 Q 512 678 338 656 Z" fill="#0e3a44"/>
+  <path d="M352 640 Q 512 610 672 640" fill="none" stroke="#ffd27a" stroke-width="3" opacity="0.55"/>
+  <path d="M380 668 Q 512 682 644 668 L 640 678 Q 512 690 384 678 Z" fill="#0e3a44" opacity="0.45"/>
+  <path d="M400 646 Q 512 624 624 646 L 630 654 Q 512 672 394 654 Z" fill="#1d4a55"/>
+
+  <!-- THE landmark: spiral glass lighthouse of Velmora -->
+  <g>
+    <!-- glow -->
+    <circle cx="512" cy="330" r="86" fill="#ffd27a" opacity="0.28"/>
+    <circle cx="512" cy="330" r="58" fill="#ffd27a" opacity="0.35"/>
+    <!-- light beams sweeping the dusk -->
+    <path d="M512 330 L 210 282 L 210 368 Z" fill="url(#beam)" opacity="0.4"/>
+    <path d="M512 330 L 814 282 L 814 368 Z" fill="url(#beam)" opacity="0.4"/>
+    <!-- tower: tapering glass spire -->
+    <path d="M470 640 L 486 356 L 538 356 L 554 640 Z" fill="url(#tower)"/>
+    <!-- glassy highlight down the tower's lit face -->
+    <path d="M494 640 L 500 360 L 512 360 L 508 640 Z" fill="#ffffff" opacity="0.38"/>
+    <!-- spiral glass ribbon winding up the tower -->
+    <path d="M472 612 L 552 612 L 550 584 L 474 584 Z" fill="#f08a3c" opacity="0.9"/>
+    <path d="M476 552 L 548 552 L 546 526 L 478 526 Z" fill="#f08a3c" opacity="0.9"/>
+    <path d="M480 494 L 544 494 L 542 470 L 482 470 Z" fill="#f08a3c" opacity="0.9"/>
+    <path d="M484 438 L 540 438 L 538 416 L 486 416 Z" fill="#f08a3c" opacity="0.9"/>
+    <!-- tower outline -->
+    <path d="M470 640 L 486 356 L 538 356 L 554 640" fill="none" stroke="#0e3a44" stroke-width="3"/>
+    <!-- lamp room -->
+    <rect x="478" y="316" width="68" height="44" rx="6" fill="#2e6f74" stroke="#0e3a44" stroke-width="3"/>
+    <rect x="486" y="324" width="52" height="28" rx="3" fill="url(#glass)"/>
+    <!-- dome + finial -->
+    <path d="M478 316 Q 512 282 546 316 Z" fill="#ff9e57" stroke="#0e3a44" stroke-width="3"/>
+    <circle cx="512" cy="282" r="7" fill="#ffd27a" stroke="#0e3a44" stroke-width="2"/>
+    <line x1="512" y1="275" x2="512" y2="258" stroke="#0e3a44" stroke-width="3"/>
+  </g>
+
+  <!-- glass-sail boats drifting on the lagoon -->
+  <g>
+    <path d="M150 780 L 210 780 L 196 796 L 164 796 Z" fill="#123f4d"/>
+    <path d="M180 780 L 180 726 L 214 780 Z" fill="#fff6e0" opacity="0.95"/>
+    <path d="M176 780 L 176 740 L 148 780 Z" fill="#ffd27a" opacity="0.9"/>
+    <path d="M760 850 L 830 850 L 814 868 L 776 868 Z" fill="#123f4d"/>
+    <path d="M795 850 L 795 788 L 834 850 Z" fill="#fff6e0" opacity="0.95"/>
+    <path d="M791 850 L 791 806 L 758 850 Z" fill="#ffd27a" opacity="0.9"/>
+  </g>
+
+  <!-- frame -->
+  <rect x="26" y="26" width="972" height="972" fill="none" stroke="#fff6e0" stroke-width="5"/>
+  <rect x="40" y="40" width="944" height="944" fill="none" stroke="#fff6e0" stroke-width="1.5" opacity="0.6"/>
+
+  <!-- the ONLY text: the place name, set high in the dusk sky -->
+  <text x="512" y="196" class="name">VELMORA</text>
+  <line x1="332" y1="228" x2="692" y2="228" class="rule"/>
+</svg>
+</body>
+</html>
